@@ -8,6 +8,7 @@ attribute :netmask, :kind_of => String
 attribute :routers, :kind_of => Array, :default => []
 attribute :options, :kind_of => Array, :default => []
 attribute :pool_options, :kind_of => Array, :default => []
+attribute :extra_pools, :kind_of => Array, :default => []
 attribute :range, :kind_of => String
 attribute :ddns, :kind_of => String, :default => nil
 attribute :peer, :kind_of => String, :default => nil

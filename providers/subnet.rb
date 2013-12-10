@@ -33,6 +33,7 @@ action :add do
       :routers => new_resource.routers,
       :options => new_resource.options,
       :pool_options => new_resource.pool_options,
+      :extra_pools => new_resource.extra_pools,
       :range => new_resource.range,
       :peer => new_resource.peer,
       :key => new_resource.key,

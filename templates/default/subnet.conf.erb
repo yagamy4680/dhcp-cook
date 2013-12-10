@@ -17,6 +17,12 @@ pool {
 }
 <% end -%>
 
+<% unless @extra_pools.empty? -%>
+<%   @extra_pools.sort.each do |pool_config_file| -%>
+include "<%= node[:dhcp][:extra_config_path] %>/<%= pool_config_file %>";
+<%   end -%>
+<% end -%>
+
 <% if @ddns -%>
   ddns-domainname "<%= @ddns %>";
 <% end -%>

@@ -48,4 +48,5 @@ when "debian"
   default[:dhcp][:config_file]  = "/etc/dhcp/dhcpd.conf"
   default[:dhcp][:init_config]  = "/etc/default/isc-dhcp-server"
   default[:dhcp][:init_iface] = "INTERFACES"
+  default[:dhcp][:apparmor_config]  = "/etc/apparmor.d/usr.sbin.dhcpd"
 end
