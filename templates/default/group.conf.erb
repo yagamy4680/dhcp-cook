@@ -14,6 +14,7 @@ group  {
     <%= param %>;
   <% end -%>
 <% end -%> 
+
     hardware ethernet <%= data["mac"] %>; 
     <% if data.has_key?("ip") -%>  
     fixed-address <%= data["ip"] %>;

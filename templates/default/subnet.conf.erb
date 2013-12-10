@@ -1,14 +1,22 @@
 # File managed by Chef
 
 subnet <%= @subnet %> netmask <%= @netmask%> {
+
 <% unless @range.empty? -%>
 pool {
   <% if @peer -%>
   failover peer "<%= node[:domain] %>";
   <% end -%>
   range <%= @range %>;
+
+  <% unless @pool_options.empty? -%>
+  <%   @pool_options.sort.each do |option| -%>
+    <%= option %>;
+  <%   end -%>
+  <% end -%>
 }
-<% end -%>  
+<% end -%>
+
 <% if @ddns -%>
   ddns-domainname "<%= @ddns %>";
 <% end -%>

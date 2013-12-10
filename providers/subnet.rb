@@ -32,6 +32,7 @@ action :add do
       :broadcast => new_resource.broadcast,
       :routers => new_resource.routers,
       :options => new_resource.options,
+      :pool_options => new_resource.pool_options,
       :range => new_resource.range,
       :peer => new_resource.peer,
       :key => new_resource.key,
