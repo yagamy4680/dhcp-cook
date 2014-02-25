@@ -1,5 +1,9 @@
 # File managed by Chef
 
+<% @extra_configs.each do |config| -%>
+include "<%= config %>";
+<% end -%>
+
 # set this to store vendor strings.
 set vendor-string = option vendor-class-identifier;
 

@@ -50,3 +50,5 @@ when "debian"
   default[:dhcp][:init_iface] = "INTERFACES"
   default[:dhcp][:apparmor_config]  = "/etc/apparmor.d/usr.sbin.dhcpd"
 end
+
+default[:dhcp][:extra_configs] = []
