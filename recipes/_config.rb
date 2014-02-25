@@ -19,7 +19,7 @@ template node[:dhcp][:config_file] do
     :my_ip => node[:ipaddress],
     :role => DHCP::Failover.role,
     :peer_ip => DHCP::Failover.peer,
-    :failover => DHCP::Failover.enabled?
+    :failover => DHCP::Failover.enabled?,
     :extra_configs => node[:dhcp][:extra_configs]
     )
   action :create
